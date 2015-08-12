@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Share example page</title>
+    <script src="simple-share.js"></script>
+    <style type="text/css">
+      div.simple-share {
+        border: solid 1px #000;
+        overflow: auto;
+        padding: 10px 0 0 10px;
+      }
+      div.simple-share a {
+        display: block;
+        float: left;
+        margin: 0 10px 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Share</h1>
+    <p>
+      There are a few ways to use the Simple Share plugin.
+      Just give an element the class <strong>simple-share</strong> and you're mostly there.
+    </p>
+
+    <h2>Example #1: Providing URL to Share</h2>
+    <p>
+      The following code will produce buttons to share the URL <a href="https://github.com/">https://github.com/</a> to both Facebook and Twitter when pressed.
+    </p>
+    <pre>
+      <!-- COLORIFY AND MONOFONT THIS -->
+      &lt;div class="simple-share" data-url="https://github.com/" data-networks="facebook,twitter"&gt;&lt;/div&gt;
+    </pre>
+    <div class="simple-share" data-url="https://github.com/" data-networks="facebook,twitter"></div>
+
+    <h2>Example #2: Omitting the URL</h2>
+    <p>
+      If you don't provide the data-url attribute in the element tag, the current window URL will be used.
+    </p>
+    <pre>
+      <!-- COLORIFY AND MONOFONT THIS -->
+      &lt;div class="simple-share" data-networks="facebook,twitter"&gt;&lt;/div&gt;
+    </pre>
+    <div class="simple-share" data-networks="facebook,twitter"></div>
+
+    <h2>Example #3: Omitting the Networks</h2>
+    <p>
+      You can even omit the data-networks attribute, in which case all available networks the plugin supports will be added.
+    </p>
+    <pre>
+      <!-- COLORIFY AND MONOFONT THIS -->
+      &lt;div class="simple-share"&gt;&lt;/div&gt;
+    </pre>
+    <div class="simple-share"></div>
+
+    <h2>Other Options</h2>
+    <p>
+      Other attributes options you can add to the element are:
+    </p>
+    <ul>
+      <li><strong>data-no-icons</strong> - this will explude the icon from being added.</li>
+      <li><strong>data-add-text</strong> - this will add the title for each network being added.</li>
+    </ul>
+    <pre>
+      <!-- COLORIFY AND MONOFONT THIS -->
+      &lt;div class="simple-share" data-add-text data-no-icons data-networks="facebook"&gt;&lt;/div&gt;
+    </pre>
+    <div class="simple-share" data-add-text data-no-icons data-networks="facebook"></div>
+
+    <h2>Supported Networks</h2>
+    <ul>
+      <li>Facebook</li>
+      <li>reddit</li>
+      <li>Twitter</li>
+    </ul>
+  </body>
+</html>
